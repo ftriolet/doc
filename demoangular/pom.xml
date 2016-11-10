@@ -6,7 +6,7 @@
   <version>2.0.3-SNAPSHOT</version>
   <packaging>war</packaging>
   <build>
-    <finalName>demoangular</finalName>
+    <finalName>demoangular-test</finalName>
   </build>
   <properties>
     <failOnMissingWebXml>true</failOnMissingWebXml>
