@@ -4,6 +4,9 @@ angular.module('demoangular',['ngRoute','ngResource'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/',{templateUrl:'views/landing.html',controller:'LandingPageController'})
+      .when('/Articles',{templateUrl:'views/Article/search.html',controller:'SearchArticleController'})
+      .when('/Articles/new',{templateUrl:'views/Article/detail.html',controller:'NewArticleController'})
+      .when('/Articles/edit/:ArticleId',{templateUrl:'views/Article/detail.html',controller:'EditArticleController'})
       .when('/Books',{templateUrl:'views/Book/search.html',controller:'SearchBookController'})
       .when('/Books/new',{templateUrl:'views/Book/detail.html',controller:'NewBookController'})
       .when('/Books/edit/:BookId',{templateUrl:'views/Book/detail.html',controller:'EditBookController'})
