@@ -1,0 +1,23 @@
+<header ng-switch on="$location.path().indexOf('/Tickets/new') > -1">
+    <h3 ng-switch-when="true">Create a new Ticket</h3>
+    <h3 ng-switch-when="false">View or edit Ticket</h3>
+</header>
+<form id="TicketForm" name="TicketForm" class="form-horizontal" role="form">
+    
+
+    <div class="form-group" ng-class="{'has-error': TicketForm.title.$invalid}">
+        <label for="title" class="col-sm-2 control-label">Title</label>
+        <div id="titleControls" class="col-sm-10">
+            <input id="title" name="title" type="text" class="form-control" ng-model="ticket.title" placeholder="Enter the Ticket Title"></input>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button id="saveTicket" name="saveTicket" class="btn btn-primary" ng-disabled="isClean() || TicketForm.$invalid" ng-click="save()"><span class="glyphicon glyphicon-ok-sign"></span> Save</button>
+            <button id="cancel" name="cancel" class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove-sign"></span> Cancel</button>
+            <button id="deleteTicket" name="deleteTicket" class="btn btn-danger" ng-show="ticket.id" ng-click="remove()"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+        </div>
+    </div>
+</form>

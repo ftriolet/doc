@@ -16,6 +16,9 @@ angular.module('demoangular',['ngRoute','ngResource'])
       .when('/Talks',{templateUrl:'views/Talk/search.html',controller:'SearchTalkController'})
       .when('/Talks/new',{templateUrl:'views/Talk/detail.html',controller:'NewTalkController'})
       .when('/Talks/edit/:TalkId',{templateUrl:'views/Talk/detail.html',controller:'EditTalkController'})
+      .when('/Tickets',{templateUrl:'views/Ticket/search.html',controller:'SearchTicketController'})
+      .when('/Tickets/new',{templateUrl:'views/Ticket/detail.html',controller:'NewTicketController'})
+      .when('/Tickets/edit/:TicketId',{templateUrl:'views/Ticket/detail.html',controller:'EditTicketController'})
       .otherwise({
         redirectTo: '/'
       });
